@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8wnUdf7gCjorYsY3eICQhN56N8JzFoU+Sh6dyOIh84WP5I1SgogZffKabz07tJ5f9frsWWYAyVlGoahXVa4JaQ==",
+  "dgSpecHash": "2lTI1X0dQlAG3GATWqtcInYaximT8I8fpUvhNQJzy8m/7HbN5tExl+R4zwatyM7kpRpVViBW61RmWEmKz7p07w==",
   "success": true,
-  "projectFilePath": "/home/fundacion/Escritorio/6to Semestre/MVC/MVC.csproj",
+  "projectFilePath": "/home/fundacion/Escritorio/6to Semestre/TODOList-Project-MVC/MVC/MVC.csproj",
   "expectedPackageFiles": [
     "/home/fundacion/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/home/fundacion/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",

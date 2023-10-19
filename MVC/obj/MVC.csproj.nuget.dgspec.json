@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/fundacion/Escritorio/6to Semestre/MVC/MVC.csproj": {}
+    "/home/fundacion/Escritorio/6to Semestre/TODOList-Project-MVC/MVC/MVC.csproj": {}
   },
   "projects": {
-    "/home/fundacion/Escritorio/6to Semestre/MVC/MVC.csproj": {
+    "/home/fundacion/Escritorio/6to Semestre/TODOList-Project-MVC/MVC/MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/fundacion/Escritorio/6to Semestre/MVC/MVC.csproj",
+        "projectUniqueName": "/home/fundacion/Escritorio/6to Semestre/TODOList-Project-MVC/MVC/MVC.csproj",
         "projectName": "MVC",
-        "projectPath": "/home/fundacion/Escritorio/6to Semestre/MVC/MVC.csproj",
+        "projectPath": "/home/fundacion/Escritorio/6to Semestre/TODOList-Project-MVC/MVC/MVC.csproj",
         "packagesPath": "/home/fundacion/.nuget/packages/",
-        "outputPath": "/home/fundacion/Escritorio/6to Semestre/MVC/obj/",
+        "outputPath": "/home/fundacion/Escritorio/6to Semestre/TODOList-Project-MVC/MVC/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/fundacion/.nuget/NuGet/NuGet.Config"
