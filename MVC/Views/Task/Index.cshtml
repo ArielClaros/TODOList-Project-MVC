@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Tasks";
+}
+
+@model List<TaskEntity>
+
+<div class="task-list-container">
+    <h1>Lista de Tareas</h1>
+    <div>
+        @foreach (var task in Model)
+        {
+            <div class="task-item" key="@task.Id">
+                <div class="task-details">@task.TaskName</div>
+                <div class="item-button">
+                    <button class="edit" onclick="editTask('@task.Id')">Edit</button>
+                    <button class="delete" onclick="deleteTask('@task.Id')">Delete</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div class="item-button-more">
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Task" asp-action="create">+</a>
+    </li>
+</div>
+
+@section scripts {
+    <script>
+        function editTask(id) {
+            var taskName = prompt("Introduce el nuevo nombre de la tarea:");
+            var startDate = prompt("Introduce la nueva fecha de inicio:");
+            var endDate = prompt("Introduce la nueva fecha de fin:");
+
+            if (taskName && startDate && endDate) {
+                fetch(`/Task/EditTask/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        TaskName: taskName,
+                        StartDate: startDate,
+                        EndDate: endDate
+                    })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        location.reload();
+                    } else {
+                        console.error('Error al editar la tarea:', response.status);
+                    }
+                    // Puedes redirigir o hacer otras acciones después de una actualización exitosa
+                })
+                .catch(error => console.error('Error:', error));
+            }
+        }
+
+        function deleteTask(id) {
+            //var confirmDelete = confirm("¿Estás seguro de que quieres eliminar esta tarea?");
+
+            fetch(`/Task/Delete/${id}`, {
+                    method: 'Delete',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                })
+                .then(response => {
+                    if (response.ok) {
+                        location.reload();
+                    } else {
+                        console.error('Error al eliminar la tarea:', response.status);
+                    }
+                })
+                .catch(error => console.error('Error al eliminar la tarea:', error));
+        }
+    </script>
+}
